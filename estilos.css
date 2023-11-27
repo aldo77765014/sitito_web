@@ -1,0 +1,401 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(imagenes/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+.container {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-family: cursive;
+    padding: 0.5rem;
+}
+
+.menu {
+    background-color: red;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    margin-right: 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px dotted rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+.menu a:hover {
+    background-color: rgb(236, 225, 59);
+    color: red;
+}
+
+.portada {
+    position: relative;
+    margin: 5%;
+    padding: 2%;
+    border: 0.5rem dotted black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.portada-img {
+    max-width: 170%;
+    height: auto;
+}
+
+.logo {
+    position: absolute;
+    top: -5rem;
+    left: -17rem;
+}
+
+.img_logo {
+    max-width: 50%;
+    height: auto;
+}
+
+.logo2 {
+    position: absolute;
+    top: -13rem;
+    right: -22rem;
+}
+
+.img_logo2 {
+    max-width: 50%;
+    height: auto;
+}
+
+.container2 {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: cursive;
+    border: 0.5rem dotted black;
+    width: 40%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.contenido-extra {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.imagen-extra img {
+    max-width: 80%;
+    height: auto;
+    padding: 10px;
+    border: 0.5rem dotted black;
+    margin-left: 4rem;
+}
+
+.parrafo-izquierda {
+    margin-right: 4rem;
+    padding: 1rem;
+    border: 0.3rem dotted red;
+    background-color: rgb(127, 223, 247);
+    font-size: 0.9rem;
+    padding: 1rem;
+    width: 30%;
+    height: 20rem;
+}
+
+.parrafo-grande {
+    margin-right: 4rem;
+    padding: 1rem;
+    border: 0.3rem dotted red;
+    background-color: rgb(127, 223, 247);
+    font-size: 1.1rem;
+    padding: 1rem;
+    width: 50%;
+    height: 40rem;
+    margin-top: -2rem;
+}
+
+.nuevo-parrafo {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: cursive;
+    border: 0.5rem dotted black;
+    width: 40%;
+    margin-top: -5rem; 
+    margin-left: 5rem; 
+    margin-right: auto;
+    padding: 1rem;
+}
+.redes-sociales {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.social-button:nth-child(4) {
+    background-color: #ff9900;
+    color: white; 
+    border: 2px solid #ff9900; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: bold; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-button:nth-child(4):hover {  
+    background-color: white;
+    color: #ff9900;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container {
+        font-size: 1.5rem;
+    }
+}
+
+
+/***************/
+header div.container{
+    place-content: flex-start;
+}
+header div.container nav{
+    width: 70%;
+    display: flex;
+    place-content: space-between;
+}
+menu, #menu-check{
+    display: none;
+}
+@media only screen and (max-width:900px){
+    header div.container,header div.container ul,header div.container ul li{
+        display: inline;
+    }
+    header div.container nav{
+        width: 100%;
+        display: inline;
+    }
+}
+@media only screen and (max-width:700px){
+      header h1{
+        margin: 0;
+      }
+      header h1 a{
+        padding: 0;
+      }
+      header div.container{
+        display: flex;
+        place-content: space-between;
+      }
+      #menu-check:not(:checked) ~ nav{
+        display: none;
+      }
+      #menu-check:checked ~ nav{
+        display:  block;
+      }
+      #menu {
+        display: block;
+        color: var(--color-1);
+        background-color: var(--bgcolor-1);
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: 3px solid var(--color-1);
+        border-radius: 0.3rem;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+      }
+      #menu:hover{
+        color: var(--text-color-3);
+        background:var(--color-1 );
+      }
+      
+
+}
+
+/*formulario*/
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    }
+    
+    .formulario__label {
+    display: block;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+    }
+    
+    .formulario__grupo-input {
+    position: relative;
+    }
+    
+    .formulario__input {
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+    }
+    
+    .formulario__input:focus {
+    border: 3px solid #0075FF;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+    }
+    
+    .formulario__input-error {
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+    }
+    
+    .formulario__input-error-activo {
+    display: block;
+    }
+    
+    .formulario__validacion-estado {
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+    }
+    
+    .formulario__checkbox {
+    margin-right: 10px;
+    }
+    
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+    grid-column: span 2;
+    }
+    
+    .formulario__mensaje {
+    height: 45px;
+    line-height: 45px;
+    background: #F66060;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+    }
+    
+    .formulario__mensaje-activo {
+    display: block;
+    }
+    
+    .formulario__mensaje p {
+    margin: 0;
+    }
+    
+    .formulario__grupo-btn-enviar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .formulario__btn {
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+    }
+    
+    .formulario__btn:hover {
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+    }
+    
+    .formulario__mensaje-exito {
+    font-size: 14px;
+    color: rgb(36, 25, 139);
+    display: none;
+    }
+    
+    .formulario__mensaje-exito-activo {
+    display: block;
+    }
+    
+    
+    .formulario__grupo-correcto .formulario__validacion-estado {
+    color: #301ed1;
+    opacity: 1;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__label {
+    color: #bb2929;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__validacion-estado {
+    color: #bb2929;
+    opacity: 1;
+    }
+    
+    .formulario__grupo-incorrecto .formulario__input {
+    border: 3px solid #bb2929;
+    }
+    
+    
+    
+    @media screen and (max-width: 800px) {
+    .formulario {
+    grid-template-columns: 1fr;
+    }
+    
+    .formulario__grupo-terminos,
+    .formulario__mensaje,
+    .formulario__grupo-btn-enviar {
+    grid-column: 1;
+    }
+    
+    .formulario__btn {
+    width: 100%;
+    }
+    }
